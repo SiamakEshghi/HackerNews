@@ -25,6 +25,7 @@ const News = (props: NewsProps): React.Node => {
   const pageRef = React.useRef(0);
   const nbPagesRef = React.useRef(0);
   const timeoutRef = React.useRef();
+  const searchRef = React.useRef();
 
   const { loading, data, error, sendRequest, clear, apiIdentifier } = useApi();
   const isScrolledToBottom = useScroll();
@@ -63,6 +64,10 @@ const News = (props: NewsProps): React.Node => {
     },
     [searchHandler]
   );
+
+  React.useEffect(() => {
+    searchRef.current.focus();
+  }, []);
 
   React.useEffect(() => {
     if (error) {
@@ -114,6 +119,7 @@ const News = (props: NewsProps): React.Node => {
         searchHandler={searchHandler}
         changeHandler={searchChangeHandler}
         query={query}
+        ref={searchRef}
       />
       <p className={styles.total}>{`${total} Results found`}</p>
       <div className={styles.results}>

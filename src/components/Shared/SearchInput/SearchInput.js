@@ -9,7 +9,7 @@ type SearchProps = {
   query: string,
 };
 
-const Search = (props: SearchProps): React.Node => {
+const Search = (props: SearchProps, ref): React.Node => {
   const { changeHandler, query } = props;
 
   return (
@@ -20,8 +20,9 @@ const Search = (props: SearchProps): React.Node => {
       placeholder={'Search for the news'}
       onChange={changeHandler}
       name="search"
+      ref={ref}
     />
   );
 };
 
-export default Search;
+export default React.forwardRef(Search);

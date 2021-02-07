@@ -12,6 +12,11 @@ type ErrorModalProps = {
 
 const ErrorModal = (props: ErrorModalProps): React.Node => {
   const { showModal, errorMessage, closeHandler } = props;
+  const btnRef = React.useRef();
+
+  React.useEffect(() => {
+    if (showModal) btnRef.current.focus();
+  }, [showModal]);
 
   if (!showModal) return false;
 
@@ -19,7 +24,7 @@ const ErrorModal = (props: ErrorModalProps): React.Node => {
     <div className={styles.modal}>
       <Card customClass={styles.error}>
         <p>{errorMessage}</p>
-        <button className={styles.closeBtn} onClick={closeHandler}>
+        <button className={styles.closeBtn} onClick={closeHandler} ref={btnRef}>
           Close
         </button>
       </Card>
