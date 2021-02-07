@@ -1,0 +1,14 @@
+@import '../../../styles/colors.scss';
+
+.input {
+  background-color: $gray;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 100px;
+  transition: all 0.2s;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}

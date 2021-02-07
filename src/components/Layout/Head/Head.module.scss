@@ -1,0 +1,10 @@
+@import '../../../styles/colors.scss';
+
+.title {
+  text-align: center;
+  color: $tertiaryColor;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  background-color: $primaryColor;
+  height: 100%;
+}

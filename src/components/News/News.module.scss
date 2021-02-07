@@ -1,0 +1,24 @@
+@import '../../styles/colors.scss';
+
+.news {
+  display: grid;
+  padding: 2rem 5rem;
+  grid-template-rows: 2rem 1rem 1fr 10rem;
+  gap: 1rem;
+}
+
+.total {
+  color: $white;
+  justify-self: center;
+  font-weight: 500;
+}
+
+.results {
+  grid-row: 3 / 4;
+}
+
+.spinner {
+  grid-row: 4 / -1;
+  padding-top: 5rem;
+  justify-self: center;
+}

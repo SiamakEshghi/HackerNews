@@ -1,0 +1,27 @@
+@import '../../../styles/colors.scss';
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.hit {
+  height: 7rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+.text {
+  grid-column: 2 / -1;
+  text-align: center;
+  color: black;
+}
+
+.score {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  padding-left: 0.5rem;
+  color: $tertiaryColor;
+}

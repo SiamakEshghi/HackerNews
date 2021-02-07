@@ -1,0 +1,18 @@
+@import '../../styles/colors.scss';
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 4rem 1fr;
+}
+
+.head {
+  grid-row: 1 / 2;
+  border-bottom: 1px solid $secondaryColor;
+}
+
+.main {
+  height: 100%;
+  grid-row: 2 / -1;
+  background-color: $secondaryColor;
+}
